@@ -54,7 +54,7 @@ void ValidateStringXOR(std::string target, std::string key)
 std::string XORWithStringKey(std::string target, std::string key)
 {
 	std::vector<char> original(target.begin(), target.end());
-	std::vector<char> altered;
+	std::vector<char> altered(original.size());
 
 	// Loop through key and XOR each letter in key with each 
 	// letter in original and add that value to altered
@@ -117,7 +117,7 @@ void ValidateIntXOR(std::string target, std::vector<int> keys)
 std::string XORWithIntKeys(std::string target, std::vector<int> keys)
 {
 	std::vector<char> original(target.begin(), target.end());
-	std::vector<char> altered;
+	std::vector<char> altered(original.size());
 
 	// Loop through keys and XOR each key with every letter 
 	// in original and add that value to altered
